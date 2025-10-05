@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cloud text-midnight font-sans antialiased;
+}
+
+a {
+  @apply text-crimson underline-offset-2 hover:text-midnight;
+}
+
+::selection {
+  background-color: rgba(200, 16, 46, 0.2);
+}
+
+.dark body {
+  @apply bg-midnight text-cloud;
+}
+
+[data-focus-visible-added] {
+  outline: none;
+  box-shadow: theme('boxShadow.focus');
+}
+
+.table-fixed td,
+.table-fixed th {
+  @apply whitespace-nowrap;
+}
+
+.price-grid {
+  font-feature-settings: 'tnum';
+}
